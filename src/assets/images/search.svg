@@ -1,0 +1,15 @@
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <clipPath id="zv20w4faza">
+            <path d="M916 0v514H0V0h916z"/>
+        </clipPath>
+        <clipPath id="h11692joob">
+            <path d="M9 0c4.968 0 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 9 18c-4.968 0-9-4.032-9-9s4.032-9 9-9zm0 2C5.132 2 2 5.132 2 9c0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15A6.977 6.977 0 0 0 16 9c0-3.868-3.133-7-7-7z"/>
+        </clipPath>
+    </defs>
+    <g clip-path="url(#zv20w4faza)" transform="translate(-506 -154)">
+        <g clip-path="url(#h11692joob)" transform="translate(508 156)">
+            <path fill="#BBB" d="M0 0h20.314v20.314H0V0z"/>
+        </g>
+    </g>
+</svg>

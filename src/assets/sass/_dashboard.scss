@@ -1,0 +1,362 @@
+/* ==========================================================================
+   header
+  ========================================================================== */
+.navbar {
+  height: 93px;
+  padding: 0 32px;
+  background-color: $main-background !important;
+  border-bottom: 1px solid rgba($white, 0.1);
+  .header-logo {
+    width: 75px;
+    cursor: pointer;
+  }
+  .container {
+    padding: 0;
+    max-width: 100%;
+  }
+  .page-back {
+    color: $white;
+    font-size: 14px;
+    position: relative;
+    left: 210px;
+    @include font-weight-style(500, normal);
+    img {
+      cursor: pointer;
+    }
+    span {
+      pointer-events: none;
+      cursor: default;
+    }
+    .project-type {
+      font-size: 12px;
+      color: #bbb;
+      margin-left: 27px;
+      @include font-weight-style-2(400, normal);
+    }
+  }
+  .header-right-item {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    h3 {
+      color: $white;
+      font-size: $f-14;
+      margin-right: 62px;
+      margin-bottom: 0px;
+      cursor: pointer;
+      @include font-weight-style-2(500, normal);
+      &:hover {
+        color: $primary-color;
+      }
+      &.active {
+        color: $primary-color;
+      }
+    }
+    .dropdown {
+      display: flex;
+      .dropdown-menu {
+        @include dropdown-menu();
+        margin-top: 30px;
+        border: 1px solid rgba($white, 0.1);
+        padding: 0 16px;
+      }
+      .user-profile {
+        margin-right: 16px;
+        @include profile-pic();
+        background-size: 40px;
+        width: 40px;
+        height: 41px;
+        border: solid 1px #979797;
+      }
+      .btn {
+        color: $white;
+        background: transparent;
+        padding: 0;
+        border: 0;
+        font-size: 16px;
+        @include font-weight-style-2(600, normal);
+        &.dropdown-toggle {
+          &::after {
+            border: 0;
+            background: url(../images/down-arrow-white.svg) no-repeat;
+            width: 14px;
+            height: 8px;
+            background-size: 10px;
+            position: relative;
+            top: 2px;
+            left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   dashboard list view
+  ========================================================================== */
+.dashboard-container {
+  padding: 123px 32px 20px 32px;
+  .dashboard-header {
+    margin: 60px 0 32px 0;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (min-width: 1500px) {
+      margin: 71px 0 32px 0;
+    }
+    .big-head {
+      text-align: left;
+      font-size: 30px;
+      line-height: 20px;
+      position: relative;
+      span.sm-txt {
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 1.75px;
+        @include font-weight-style-2(600, normal);
+        span {
+          color: $primary-color;
+        }
+      }
+      &::before {
+        content: "Projects";
+        display: block;
+        font-size: 73px;
+        position: absolute;
+        top: -20px;
+        z-index: -1px;
+        text-transform: uppercase;
+        color: rgba($white, 0.06);
+        @include font-weight-style-2(800, normal);
+        @media screen and (min-width: 1500px) {
+          font-size: 100px;
+        }
+      }
+    }
+    .right-item {
+      display: flex;
+    }
+    .search-wrapper {
+      width: 360px;
+    }
+    .filter-btn {
+      width: 60px;
+      height: 60px;
+      margin: 0 24px;
+      padding: 18px;
+      border-radius: 8px;
+      background-color: #3f3f3f;
+      position: relative;
+    }
+    .create-project-btn {
+      min-width: 220px;
+    }
+  }
+}
+.filter-dot {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #48fabe;
+  left: 44px;
+  top: 13px;
+}
+.filter-dot-modal {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #48fabe;
+  left: 44px;
+  top: 2px;
+}
+
+.inner-card-section {
+  width: 100%;
+  .card-section {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    > div {
+      width: 100%;
+      .scroll {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden !important;
+        margin: 0 -30px 0 0;
+      }
+    }
+  }
+  .dashboard-card {
+    width: calc(25% - 30px);
+    margin: 0 15px 37px 15px;
+    padding: 8px 8px 24px 8px;
+    border-radius: 16px;
+    background-color: #2f2f2f;
+    @media screen and (min-width: 1600px) {
+      width: calc(20% - 30px);
+    }
+    .img-box {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      border-radius: 12px;
+      overflow: hidden;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.8) 10%,
+          rgba(0, 0, 0, 0) 50%
+        );
+        opacity: 0.6;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .card-tag {
+        min-width: 105px;
+        text-align: center;
+        font-size: 12px;
+        color: $primary-color;
+        padding: 3px 8px;
+        border: 1px solid $primary-color;
+        position: absolute;
+        left: 8px;
+        bottom: 8px;
+        border-radius: 6px;
+        @include font-weight-style-2(600, normal);
+        -webkit-backdrop-filter: blur(19px);
+        backdrop-filter: blur(19px);
+        background-color: rgba($black, 0.3);
+      }
+      .card-tag.secondary {
+        border-color: #fa48de;
+        color: #fa48de;
+      }
+      .dropdown {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        .dropdown-menu {
+          @include dropdown-menu();
+        }
+        .card-dropdown {
+          padding: 0;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background-color: rgba(63, 63, 63, 0.36);
+          border-color: transparent;
+        }
+        .dropdown-toggle::after {
+          border: 0;
+          margin: 0;
+        }
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .card-body {
+        padding: 24px 5px 0 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .card-title {
+        color: $white;
+        font-size: 18px;
+        margin-bottom: 8px;
+        @include truncate();
+        @include font-weight-style-2(600, normal);
+      }
+      .card-text {
+        color: $grey;
+        font-size: 14px;
+        min-height: 48px;
+        @include font-weight-style(400, normal);
+      }
+      .card-footer {
+        margin-top: 24px;
+        padding: 0;
+        border-radius: 0;
+        border: 0;
+        display: flex;
+        justify-content: space-between;
+        a {
+          color: $grey;
+          font-size: $f-12;
+          text-decoration: none;
+          @include font-weight-style(400, normal);
+          img {
+            margin-right: 7px;
+          }
+        }
+      }
+    }
+    .card-body {
+      padding: 24px 5px 0 5px;
+    }
+    .card-title {
+      color: $white;
+      font-size: 18px;
+      margin-bottom: 8px;
+      @include truncate();
+      cursor: pointer;
+      @include font-weight-style-2(600, normal);
+    }
+    .card-text {
+      color: $grey;
+      font-size: 14px;
+      min-height: 84px;
+      cursor: pointer;
+      @include font-weight-style(400, normal);
+    }
+    .card-footer {
+      margin-top: 24px;
+      padding: 0;
+      border-radius: 0;
+      border: 0;
+      display: flex;
+      justify-content: space-between;
+      a {
+        color: $grey;
+        font-size: $f-12;
+        text-decoration: none;
+        cursor: default;
+        @include font-weight-style(400, normal);
+        img {
+          margin-right: 7px;
+        }
+      }
+    }
+  }
+  .load-more-wrapper {
+    width: 100%;
+    margin-top: 65px;
+    display: flex;
+    align-items: center;
+    .count-txt {
+      color: $grey;
+      font-size: 16px;
+      @include font-weight-style(400, normal);
+    }
+    .load-btn {
+      min-width: 218px;
+      margin: 0 auto;
+    }
+  }
+}
+.dropdrown-item-right {
+  margin-right: 6px !important;
+}

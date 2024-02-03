@@ -1,0 +1,166 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+
+@import "~bootstrap/scss/bootstrap";
+@import '~remixicon/fonts/remixicon.css';
+@import "../sass/variables";
+@import '~react-dropdown/style.css';
+@import "../sass/base";
+@import "../sass/mixing";
+@import "../sass/loader";
+@import "../sass/button";
+@import "../sass/checkbox";
+@import "../sass/form";
+@import "../sass/modal";
+@import "../sass/sign-up";
+@import "../sass/dashboard";
+@import "../sass/sidebar";
+@import "../sass/project";
+@import "../sass/_project-steps";
+@import "../sass/_annotation";
+@import "../sass/_compare-modal";
+
+
+
+
+  /* ==========================================================================
+   toast
+  ========================================================================== */
+  .SnackbarContainer-root{
+      max-width: 350px !important;
+  }
+  .SnackbarItem-contentRoot{
+    font-size: $f-14 !important;
+    padding: 2px 20px 2px 10px !important;
+    border-radius:8px !important;
+    box-shadow: none !important;
+    flex-wrap:inherit !important;
+    align-items: flex-start !important;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif !important;
+    .SnackbarItem-action{
+        cursor: pointer;
+        position: relative;
+        top: 12px;
+    }
+    .MuiSvgIcon-root{
+        display: none !important;
+    }
+    &.SnackbarItem-variantError{
+        color:$white !important;
+        background-color: $red-dark !important;
+        &:before{
+            content: '' !important;
+            display: block !important;
+            background: url(../images/toast-error-white.png) no-repeat !important;
+            width: 20px !important;
+            height: 20px !important;
+            background-size: 100% !important;
+            margin-right: 10px;
+            flex-shrink: 0;
+            position: relative;
+            top: 8px;
+        }
+        .SnackbarItem-action{
+            .icon-cross{
+                background: url(../images/close-white.png) no-repeat;
+                width: 20px;
+                height: 20px;
+                display: block;
+                position: relative;
+                top: -3px;
+            }
+        }
+    }
+    &.SnackbarItem-variantSuccess{
+      color:$black-dark !important;
+      background-color: #0ed293 !important;
+      &:before{
+          content: '' !important;
+          display: block !important;
+          background: url(../images/sm-tick-circle.png) no-repeat !important;
+          width: 20px !important;
+          height: 20px !important;
+          background-size: 100% !important;
+          margin-right: 10px;
+          flex-shrink: 0;
+          position: relative;
+          top: 8px;
+      }
+        .icon-cross{
+            background: url(../images/close-black.png) no-repeat;
+            width: 12px;
+            height: 12px;
+            display: block;
+
+        }
+    }
+  }
+
+
+/* ==========================================================================
+   static pages
+  ========================================================================== */
+  .static-content{
+    padding: 126px 32px 15px 32px;
+    max-width: 100%;
+    h3{
+        color:$primary-color;
+        font-size: 40px;
+        margin-bottom: 16px;
+        @include font-weight-style-2(600, normal);
+    }
+    h4{
+        color:$white;
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: 16px;
+        margin-bottom: 12px;
+        text-decoration: underline;
+        @include font-weight-style-2(600, normal);
+    }
+    h5{
+        color:$white;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 12px;
+        font-style: italic;
+        @include font-weight-style-2(400, normal);
+    }
+    p{
+        color:$white;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 12px;
+        text-align: justify;
+        @include font-weight-style-2(400, normal);
+        a{
+            color:$white;
+            text-decoration: none;
+        }
+          .span-yellow{
+            background-color: yellow;
+            color: #000;
+        }
+        &.reference{
+          margin-bottom: 5px;
+        }
+        &.divider{
+          margin-bottom: 0;
+        }
+    }
+      ul{
+        li{
+          color:$white;
+          font-size: 16px;
+          text-align: justify;
+          @include font-weight-style-2(400, normal);
+          a{
+            color:$white;
+          }
+        }
+      }
+
+  }

@@ -1,0 +1,30 @@
+<svg width="24" height="22" viewBox="0 0 24 22" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <clipPath id="hfoa07yz0a">
+            <path d="M916 0v514H0V0h916z"/>
+        </clipPath>
+    </defs>
+    <g clip-path="url(#hfoa07yz0a)" transform="translate(-755 -99)">
+        <path d="M765 111v5M776 111v5M767 118h7M767.636 109H774" stroke="#FFF" stroke-width="2" fill="none" stroke-linecap="square" stroke-miterlimit="10"/>
+        <path d="M765 111a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM765 120a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM776 111a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM776 120a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="#FFF" stroke-width="2" fill="none" stroke-miterlimit="10"/>
+        <g>
+            <path d="M758 105v6" stroke="#FFF" stroke-width="2" fill="none" stroke-linecap="square" stroke-miterlimit="10"/>
+        </g>
+        <g>
+            <path d="M771 104v2" stroke="#FFF" stroke-width="2" fill="none" stroke-linecap="square" stroke-miterlimit="10"/>
+        </g>
+        <g>
+            <path d="M760 113h2" stroke="#FFF" stroke-width="2" fill="none" stroke-linecap="square" stroke-miterlimit="10"/>
+        </g>
+        <g>
+            <path d="M761 102h7" stroke="#FFF" stroke-width="2" fill="none" stroke-linecap="square" stroke-miterlimit="10"/>
+        </g>
+        <path d="M758 104a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="#FFF" stroke-width="2" fill="none" stroke-miterlimit="10"/>
+        <g>
+            <path d="M758 115a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="#FFF" stroke-width="2" fill="none" stroke-miterlimit="10"/>
+        </g>
+        <g>
+            <path d="M771 104a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="#FFF" stroke-width="2" fill="none" stroke-miterlimit="10"/>
+        </g>
+    </g>
+</svg>

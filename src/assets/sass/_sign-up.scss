@@ -1,0 +1,328 @@
+/* ==========================================================================
+   signup
+  ========================================================================== */
+  .signup-wrapper{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    .container-fluid{
+      display: flex;
+      height: 100%;
+      padding: 0;
+      .cols{
+        @media only screen and (max-width: 992px) {
+          width: 100%;
+        }
+      }
+      .signup-left-item{
+        width: 50%;
+        background: url(../images/login-back.png) no-repeat center center;
+        background-size: cover;
+        height: 100%;
+        .signup-left-data{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          padding: 15px;
+          img{
+            max-width: 100%;
+          }
+          .data{
+            position: relative;
+            top: 160px;
+            left: 70px;
+            display: none;
+            @media only screen and (min-width: 1366px) {
+              top:180px;
+            }
+            @media only screen and (min-width: 1600px) {
+              top: 190px;
+              left: 85px;
+            }
+            @media only screen and (min-width: 1800px) {
+              top: 220px;
+              left: 100px;
+            }
+            @media only screen and (min-width: 1850px) {
+              top: 240px;
+              left: 120px;
+            }
+            p{
+              color:$primary-color;
+              text-transform: uppercase;
+              font-size: $f-14;
+              letter-spacing: 5px;
+              @include font-weight-style-2(600, normal);
+            }
+            h3{
+              color:#a3a8b6;
+              font-size: 50px;
+              line-height: 78px;
+              @include font-weight-style-2(700, normal);
+              span{
+                color: $primary-color;
+              }
+              @media only screen and (max-width: 1366px) {
+                font-size: 42px;
+                line-height: 70px;
+              }
+            }
+          }
+        }
+      }
+      .signup-right-item{
+        width: 50%;
+        padding: 0 20px;
+        position: relative;
+        overflow: auto;
+        .login-form{
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          height: 100%;          
+        }
+        .signup-form {
+          max-width: 400px;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          height: 100%;
+          &.reset-password{
+            .row{
+              width: 100%;
+              .form-group{
+                .floating-input{
+                  margin-bottom: 5px;
+                  .form-control{
+                    &.active{
+                      border: 1px solid $white;
+                    }
+                  }
+                }
+              }
+              .primary-btn{
+                margin-top: 20px;
+              }
+            }
+            .back-to-sign{
+              margin: 20px auto 0;
+            }
+            .error{
+              top: -2px;
+            }
+          }
+          .big-head{
+            margin: 0 0 35px 0;
+          }
+          .primary-btn{
+            min-width: 100%;
+            font-size: $f-16;
+            &.sign-in-btn{
+              .loader-inline{
+                top: 3px;
+              }
+              .loader-inner{
+                font-size: 6px;
+                border-top: 0.4em solid $black-dark;
+                border-right: 0.4em solid $black-dark;
+                border-bottom: 0.4em solid $black-dark;
+              }
+            }
+          }
+          .resend-btn{
+            color:$form-label;
+            font-size: 13px;
+            @include font-weight-style(600, normal);
+            a{
+              text-decoration: underline;
+              color:$form-label;
+            }
+          }
+          .back-to-sign{
+            margin: 0 auto 0;
+            display: block;
+          }
+          .forgot-main{
+            width: 100%;
+            text-align: right;
+            align-items: flex-end;
+            margin-bottom: 24px;
+          }
+          .help-txt{
+            color:$primary-color;
+            padding: 0;
+            font-size: $f-14;
+            text-align: right;
+            width: auto;
+            position: relative;
+            top: -11px;
+            @include font-weight-style(500, normal);
+          }
+          .password-icon{
+            position: absolute;
+            top: 18px;
+            right: 20px;
+            z-index: 1;
+            cursor: pointer;
+          }
+          .term-txt{
+            @include font-weight-style(400, normal);
+            font-size: 14px;
+            color: #bbb;
+            text-align: center;
+            a{
+              color: #bbb;
+            }
+          }
+          .error-list{
+            width: 100%;
+            top:2px;
+            position: relative;
+            ul{
+              display: flex;
+              flex-wrap: wrap;
+              width: 100%;
+              list-style-type: none;
+              padding-left: 18px;
+              li{
+                // flex-wrap: wrap;
+                width: auto;
+                color:$grey;
+                font-size: 12px;
+                justify-content: space-between;
+                @include font-weight-style(400, normal);
+                &::before{
+                  content: "\2022";
+                  color: $white;
+                  font-weight: bold;
+                  display: inline-block; 
+                  width: 10px;
+                  margin-left: -1em;
+                }
+                &.active{
+                  color:$white;
+                  &::before{
+                    color: $primary-color;
+                  }
+                }
+                &:first-child{
+                  width: 120px;
+                }
+                &:nth-child(2){
+                  width: 73px;
+                }
+                &:nth-child(3){
+                  width: 100px;
+                }
+              }
+            }
+          }
+          .forgot-error{
+            top: 0;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  /* ==========================================================================
+   code send 
+  ========================================================================== */
+
+  .code-send-wrapper{
+    .code-send-img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 19px;
+    }
+    .enter-email-txt{
+      color: $grey;
+      font-size: $f-14;
+      text-align: center;
+      @include font-weight-style(400, normal);
+    }
+    .enter-email-sm{
+      font-size: $f-16;
+      color: $base-color;
+      text-align: center;
+      @include font-weight-style(400, normal);
+      a{
+        color:$primary-color !important;
+        text-decoration: none !important;
+        cursor: pointer;
+      }
+    }
+    .input-boxs{
+      display: flex;
+      justify-content: space-evenly;
+      margin: 29px 0 32px 0;
+      .form-control{
+        width: 100% !important;
+        font-size: 18px;
+        text-align: center;
+        &.active-state{
+          border: 1px solid $form-active-color;
+        }
+      }
+      @include placeholder{
+        font-size: $f-18; 
+        color: $grey;
+      }
+    }
+    .resend-code{
+      font-size: $f-14;
+      color: $grey;
+      text-align: center;
+      margin-bottom: 25px;
+      &:hover{
+        cursor: pointer;
+      }
+      &.active{
+        color:$primary-color;
+      }
+      span{
+        color: $primary-color;
+      }
+    }
+  }
+
+
+/* ==========================================================================
+   create profile
+  ========================================================================== */
+  .profile-container{
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    height: auto;
+    margin-top: 114px;
+    .big-head{
+      font-size: 22px;
+    }
+    .inner-box{
+      margin-top: 26px;
+      padding: 24px 16px 16px;
+      border-radius: 16px;
+      background-color: rgba($white, 0.05);
+      .upload-btn{
+        @extend .upload-btn;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .profile-form{
+      margin-top: 24px;
+      .grey-link-btn{
+        margin: 24px auto 24px;
+        display: block;
+      }
+
+    }
+  }

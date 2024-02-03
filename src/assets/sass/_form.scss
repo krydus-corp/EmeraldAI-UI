@@ -1,0 +1,386 @@
+/* ==========================================================================
+   Form
+  ========================================================================== */
+  .form-group {
+    position: relative;
+    margin-bottom: 0;
+    width: 100%;
+    .label-txt{
+      color: $form-label;
+      line-height: normal;
+      font-size: $f-14;
+      margin-bottom: 8px;
+      @include font-weight-style(400, normal);
+    }
+    label{
+      color: $form-label;
+      line-height: normal;
+      font-size: $f-14;
+      @include font-weight-style(400, normal);
+      position: absolute;
+      top: 20px;
+      z-index: 2;
+      padding: 0;
+      left: 20px;
+      pointer-events: none;
+      &.mb-0{
+        margin-bottom: 0;
+      }
+    }
+    .form-control {
+      height: 60px;
+      border-radius: 8px;
+      padding: 12px 20px 12px 20px;
+      font-size: $f-14;
+      color: $white !important;
+      background-color: $form-back-color;
+      position: relative;
+      @include font-weight-style(400, normal);
+      border-color: $form-back-color;
+      -webkit-appearance: none;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      z-index: 1;
+      &:focus, &:focus-visible{
+        box-shadow: none;
+        outline: none;
+        border: 1px solid $form-active-color !important;
+      }
+      &.is-open{
+        box-shadow: none !important;
+        outline: 0 !important;
+        border: 1px solid $form-active-color !important;
+      }
+      &.password{
+        padding-right: 50px;
+      }
+    }
+    .floating-input {
+      width: 100%;
+      margin-bottom: 25px;
+      border-radius: 8px;
+      &:focus-visible{
+        outline: 1px solid $form-active-color !important;
+      }
+      .Dropdown-root{
+        .Dropdown-placeholder{
+          display: none;
+        }
+        &.info-select{
+          width: 150px;
+          height: 50px;
+          padding: 5px 20px 5px 10px !important;
+          .Dropdown-control{
+            height: 100%;
+          }
+          .Dropdown-arrow{
+            top: 15px !important;
+          }
+        }
+      }
+      &.move{
+        label{
+          top:12px;
+          font-size: 12px;
+        }
+        .form-control{
+          padding: 23px 20px 9px 20px;
+        }
+        input[type="password"]{
+          padding: 32px 50px 9px 20px !important;
+        }
+        .Dropdown-root{
+          .Dropdown-placeholder{
+            &.is-selected{
+              display: block;
+            }
+          }
+        }
+        input:-webkit-autofill {
+          -webkit-text-fill-color :white !important;
+          -webkit-box-shadow: 0 0 0px 40rem #3b3c40 inset;
+       }
+       &:hover{
+        input:-webkit-autofill {
+          -webkit-text-fill-color :white !important;
+       }
+      }     
+      }
+      &.forgot-main{
+        .form-control{
+          padding-right: 70px;
+        }
+      }
+      &.icon-right{
+        .form-control{
+          padding-right: 20px;
+        }
+        img{
+          position: absolute;
+          top: 30px;
+          right: 20px;
+          z-index: 1;
+          cursor: pointer;
+        }
+      }
+      &.icon-left{
+        .form-control{
+          padding-left: 70px;
+        }
+        label{
+          padding-left: 53px;
+        }
+        img{
+          position: absolute;
+          top: 14px;
+          left: 20px;
+          z-index: 1;
+          &.social-img{
+            top: 8px;
+          }
+        }
+      }
+      &.grey-back{
+        background-color: #ececec;
+        .form-control {
+          background-color: #ececec;
+        }
+      }
+      &:hover{
+        input:-webkit-autofill {
+          -webkit-text-fill-color :transparent !important;
+       }
+      }
+    }
+    .password-main{
+      position: relative;
+      .password-icon{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1;
+        cursor: pointer;
+      }
+      .form-control{
+        &.active{
+          border: 1px solid $form-active-color;
+        }
+      }
+    }
+    .error-list-main{
+      width: 100%;
+      top:-12px;
+      position: relative;
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        list-style-type: none;
+        padding-left: 18px;
+        li{
+          // flex-wrap: wrap;
+          width: auto;
+          color:$grey;
+          font-size: 12px;
+          justify-content: space-between;
+          @include font-weight-style(400, normal);
+          &::before{
+            content: "\2022";
+            color: $white;
+            font-weight: bold;
+            display: inline-block; 
+            width: 10px;
+            margin-left: -1em;
+          }
+          &.active{
+            color:$white;
+            &::before{
+              color: $primary-color;
+            }
+          }
+          &:first-child{
+            width: 120px;
+          }
+          &:nth-child(2){
+            width: 73px;
+          }
+          &:nth-child(3){
+            width: 100px;
+          }
+        }
+      }
+    }
+    .was-validated .form-control:invalid, .form-control.is-invalid {
+      // border-color: transparent !important;
+      box-shadow: none !important;
+      background-image: none !important;
+    }
+    &.calendar-icon{
+      img{
+        position: absolute;
+        right: 20px;
+        top: 43px;
+        z-index: 1;
+        cursor: pointer;
+      }
+    }
+    .error-active {
+      .form-control {
+        z-index: 0;
+      }
+    }
+    .error{
+      position: relative;
+      left: 0px;
+      z-index: 1;
+      top:-22px;
+      color: $red-dark;
+      font-size: $f-12;
+      @include font-weight-style(500, normal);
+    }
+    .invalid-feedback {
+      position: relative;
+      left: 0px;
+      z-index: 1;
+      top:-2px;
+      color: $red-dark;
+      font-size: $f-12;
+      @include font-weight-style(500, normal);
+    }
+    @include placeholder{
+      font-size: $f-14; 
+      color: $form-label;
+        @include font-weight-style(500, normal);
+    }
+    .form-control:disabled,
+    .form-control[readonly]{
+      color: $white !important;
+      -webkit-text-fill-color: $white !important;
+    }
+    .form-control:disabled::-webkit-input-placeholder,
+    .form-control[readonly]::placeholder
+    {
+      color: rgba($white, 0.2);
+      -webkit-text-fill-color:rgba($white, 0.2);
+    }
+    .forgot-txt{
+      font-size: 11px;
+      right: 15px;
+      top: 17px;
+      z-index: 1;
+      padding: 0;
+      cursor: pointer;
+      color:$black-dark;
+      position: absolute;
+      background-color: transparent;
+      box-shadow: none;
+      @include font-weight-style(500, normal);
+    }
+    .hint {
+      float: right;
+      font-size: 12px;
+      line-height: 13px;
+      color: $primary-color;
+      width: 100%;
+      text-align: right;
+      position: absolute;
+      bottom: -1px;
+      right: 0;
+      @include font-weight-style(700, normal);
+    }
+  }
+
+  input[type="password"]{
+    -webkit-text-security: disc;
+    font-size: 16px !important;
+    @include font-weight-style(500, normal);
+  }
+  
+
+  /* ==========================================================================
+     other error handling
+    ========================================================================== */
+    .error {
+      float: left;
+      color: $red-light;
+      font-size: $f-13;
+      @include font-weight-style(500, normal);
+      @media only screen and (max-width: 767px) {
+        font-size: $f-12;
+      }
+    }
+
+    .check-error{
+      display: block;
+      width: 100%;
+    }
+
+    .disable-input{
+      .floating-input{
+        .form-control{
+          color: rgba($black-dark, 0.3) !important;
+          -webkit-text-fill-color:rgba($black-dark, 0.3) !important;
+        }
+        img{
+          pointer-events: none;
+          opacity: 0.6;
+        }
+        span.icon-close-black{
+          pointer-events: none;
+          opacity: 0.2;
+        }
+        .input-group-text{
+          color: rgba($black-dark, 0.3) !important;
+          -webkit-text-fill-color:rgba($black-dark, 0.3) !important;
+        }
+      }
+    }
+    .pb10 {
+      padding-bottom: 10px;
+    }
+
+  .ui-cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .ui-img-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mb25 {
+    margin-bottom: 25px !important;
+  }
+  .mt25 {
+    margin-top: 25px !important;
+  }
+  .fill-with-center-crop {
+    object-fit: none;
+    object-position: center;
+  }
+  .fit-with-in {
+    object-fit: cover;
+    object-position: center;
+  }
+  input:-webkit-autofill {
+    -webkit-text-fill-color :transparent !important;
+ }
+
+ .floating-input .Dropdown-root .Dropdown-menu .Dropdown-option{
+  position: relative;
+}
+
+ .floating-input .Dropdown-root .Dropdown-menu .Dropdown-option:nth-child(2)::after{
+   content: 'Experimental';
+   position: absolute;
+   right: 10px;
+   top: 12px;
+   background-color: #823a82;
+   padding: 5px;
+   border-radius: 5px;
+ }
+
+ .mb-8{
+   margin-bottom: 8px;
+ }

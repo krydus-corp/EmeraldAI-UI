@@ -1,0 +1,132 @@
+/* ==========================================================================
+   checkbox
+  ========================================================================== */
+  .checkbox-panel{
+    width: auto;
+    position: relative;
+    input{
+      position: absolute;
+      opacity: 0;
+      z-index: 1;
+      top:0;
+    }
+    label{
+      cursor: pointer;
+      position: inherit;
+      top: 0;
+      left: 0;
+      z-index: inherit;
+    }
+    span.radio{
+      font-size: 16px;
+      color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 16px;
+      @include font-weight-style(600, normal);
+      &:before{
+        content: '';
+        background: url(../images/radio-unchecked.svg) no-repeat;
+        height: 18px;
+        width: 18px;
+        margin-right: 8px;
+        display: inline-block;
+        background-size: 100%;
+      }
+    }
+     input[type=radio]:checked ~ span.radio:before {
+       content: '';
+       background: url(../images/radio-checked.svg) no-repeat;
+       height: 18px;
+       width: 18px;
+       margin-right: 8px;
+       display: inline-block;
+       background-size: 100%;
+     }
+     input[type=radio]:checked ~ span.radio{
+       color:$white;
+     }
+ 
+     span.checkbox{
+       font-size: 16px;
+       color:$white;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       @include font-weight-style(600, normal);
+       &:before{
+         content: '';
+         background: url(../images/checkbox-unselected.png) no-repeat;
+         height: 16px;
+         width: 16px;
+         margin-right: 10px;
+         display: inline-block;
+         background-size: 100%;
+         position: relative;
+         top: 1px;
+         flex-shrink: 0;
+       }
+       p{
+         span{
+           color:$red-dark;
+         }
+       }
+     }
+     input[type=checkbox]:checked ~ span.checkbox:before {
+       content: '';
+       background: url(../images/checkbox-selected.png) no-repeat;
+       height: 16px;
+       width: 16px;
+       margin-right: 10px;
+       display: inline-block;
+       background-size: 100%;
+       position: relative;
+       top: 0;
+       flex-shrink: 0;
+     }
+     input[type=checkbox]:checked ~ span.checkbox{
+       color:$white;
+     }
+   }
+ 
+  .checkbox-panel + .checkbox-panel{
+    margin-left: 40px;
+  }
+
+
+  /* ==========================================================================
+   boostrap switch
+  ========================================================================== */
+  .form-switch {
+    display: flex;
+    cursor: pointer;
+    flex-direction: row-reverse;
+    .form-check-input{
+      width: 48px;
+      height: 25px;
+      cursor: pointer;
+      border-radius:13px;
+      border: 0;
+      background-image: url(../images/switch-circle.svg) !important;
+      box-shadow: none !important;
+      background-color: #bbb;
+      &:focus{
+        border-color:transparent;
+        background-image: url(../images/switch-circle.svg) !important;
+        background-color: #bbb;
+      }
+    }
+    .form-check-input:checked{
+      background-color:#61d25a !important;
+    }
+    label{
+      color: $white;
+      position: relative;
+      right: 45px;
+      top: 3px;
+    }
+  }
+  .form-switch .form-check-input{
+    background-image: url(../images/switch-circle.svg) no-repeat !important;
+  }

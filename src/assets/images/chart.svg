@@ -1,0 +1,9 @@
+<svg width="401" height="401" viewBox="0 0 401 401" xmlns="http://www.w3.org/2000/svg">
+    <g fill-rule="nonzero" fill="none">
+        <path fill="#2F2F2F" d="M0 1h400v400H0z"/>
+        <path fill-opacity=".1" fill="#FFF" d="M1.5 399.5 400 290.59 399.5 401z"/>
+        <path stroke="#BBB" stroke-linecap="square" stroke-dasharray="5" d="m232.5 1.5-1 230M399.5 231.5h-168"/>
+        <path stroke="#BBB" stroke-linecap="square" d="m399.5 1.5-398 398"/>
+        <path fill-opacity=".1" fill="#FFF" d="M.5 399.5V1.5h107z"/>
+    </g>
+</svg>

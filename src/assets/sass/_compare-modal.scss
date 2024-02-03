@@ -1,0 +1,357 @@
+.modal-compare-container{
+    padding: 123px 32px 20px 32px;
+    h3{
+        @include big-head();
+        text-align: left;
+        margin-bottom: 0;
+        span{
+            margin-top: 5px;
+        }
+    }
+    h4{
+        font-size: 18px;
+        color: $white;
+        @include font-weight-style(600, normal);
+    }
+    h5{
+        font-size: 12px;
+        margin-top: 16px;
+        color: $white;
+        @include font-weight-style(600, normal);
+        span{
+          color: $grey;
+          display: block;
+          margin-top: 4px;
+          @include font-weight-style-2(400, normal);
+          .green-box{
+            padding: 1px 5px;
+            color: #48fabe;
+            display: inline-block;
+            border: solid 1px #48fabe;
+            background-color: rgba(72, 250, 190, 0.2);
+          }
+        }
+      }
+    .drop-box{
+        width: 100%;
+        display: flex;
+        margin-bottom: 5px;
+        .dropdown{
+            margin-left: auto;
+            .dropdown-menu{
+                @include dropdown-menu();
+            }
+        }
+        .secondary-btn{
+            min-width: 159px;
+            height: 50px;
+            color: $white;
+            border-color: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 24px;
+            @include font-weight-style(400, normal);
+            &:hover,
+            &:focus,
+            &:active {
+                color: $white;
+                background-color: darken($grey-btn, 2%);
+            }
+        }
+        .dropdown-toggle::after{
+            background: url(../images/down-arrow.png) center center no-repeat;
+            width: 20px;
+            height: 20px;
+            border: 0;
+        }
+    }
+    .mgt33{
+        margin-top: 33px;
+    }
+    .tag-box{
+        .tag{
+            max-width: inherit;
+        }
+    }
+}
+
+.compare-header-box{
+    width: 100%;
+    margin: 31px 0 0 0;
+    padding: 24px 0;
+    border-radius: 8px;
+    background-color: rgba($white, 0.05);
+    align-items: center;
+    &.step-8{
+        padding: 24px;
+    }
+}
+
+.compare-box{
+    padding: 24px 0;
+    border-bottom: 1px solid rgba($white, 0.1);
+    p{
+        color:$white;
+        font-size: 14px;
+        @include font-weight-style(600, normal);
+        span.green{
+            color: $primary-color;
+            @include font-weight-style(600, normal);
+        }
+        span.grey{
+            color:$grey;
+            @include font-weight-style(400, normal);
+        }
+        & + p{
+            margin-top: 8px;
+        }
+    }
+    .detail-box{
+        width: 429px;
+        height: auto;
+        margin: 0;
+        padding: 22px 21px;
+        border-radius: 8px;
+        background-color: #2f2f2f;
+        p{
+            margin-bottom: 23px;
+            color: $grey;
+        }
+        .count{
+            color: $primary-color;
+            font-size: 24px;
+            margin: 0 0 8px 0;
+            @include font-weight-style-2(600, normal);
+        }
+        &.sm-box{
+            width: 220px;
+            padding: 16px;
+            p{
+                margin-bottom: 4px;
+                @include font-weight-style(400, normal);
+            }
+        }
+    }
+    .file-upload-box{
+        @extend .file-upload-box;
+    }
+    .progress-row{
+        align-items: center;
+        .data-wrapper{
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - 100px);
+        }
+        .data{
+            width: 100%;
+            justify-content: space-between;
+            .value-left{
+                min-width: inherit;
+            }
+            .value-right{
+                width: auto;
+            }
+        }
+        .bar{
+            width: 100%;
+        }
+
+    }
+    &.step-6{
+        .train-wrapper{
+            .col-sm-4{
+                flex: 0 0 auto;
+                width: 45%;
+                @media screen and (min-width: 1600px) {
+                    width: 35%;
+                }
+            }
+            .train-cards{
+                background-color: $grey-back;
+                margin-bottom: 15px;
+                min-height: 102px;
+                padding: 16px;
+                .img-count{
+                    margin-top: 6px;
+                }
+            }
+        }
+    }
+    &.step-7{
+        .detail-box{
+            width: 470px;
+            border-radius: 4px;
+            padding: 16px;
+            @media screen and (max-width: 1366px) {
+                width: 500px;
+            }
+            @media screen and (min-width: 1400px) {
+                width: 530px;
+            }
+            @media screen and (min-width: 1600px) {
+                width: 580px;
+            }
+            @media screen and (min-width: 1800px) {
+                width: 650px;
+            }
+            p{
+                text-align: center;
+                margin-bottom: 8px;
+                @include font-weight-style(400, normal);
+                &.mt40{
+                    margin-top: 40px;
+                }
+            }
+            .chart-box{
+                width: 100%;
+                margin: 0;
+                padding: 5px;
+                border-radius: 16px;
+                background-color: #191b1f;
+                .mb32{
+                    margin-bottom: 32px;
+                }
+                .chart-content{
+                    width: 100%;
+                    height: 100%;
+                    .bar-chat-main{
+                        width: 100%;
+                        height: 100%;
+                        canvas{
+                            height: 100% !important;
+                            width: 100% !important;
+                        }
+                    }
+                    .bar-chart-scroll{
+                        overflow: auto;
+                        height: 75px;
+                        scrollbar-width: thin;
+                        // Custom Scrollbar
+                        &::-webkit-scrollbar {
+                            width: 6px;
+                        }
+                        &::-webkit-scrollbar-track {
+                            background-color: transparent;
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            background: #b5b5b54d;
+                            border-radius: 2px;
+                        }
+                    }
+                    .bar-char-label-main{
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        .value-box{
+                          display: flex;
+                          align-items: center;
+                          margin: 0 5px;
+                          .dot{
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            background-color: $primary-color;
+                            margin-right: 5px;
+                          }
+                          span{
+                            color: $white;
+                            font-size: 12px;
+                            @include font-weight-style(400, normal);
+                          }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.step-13{
+        h5{
+            line-height: 24px;
+            margin-top: 0;
+        }
+        .col-sm-5{
+            padding-right: 40px;
+            .classblance-inner{
+                padding-right: 20px;
+                width: 100%;
+                max-height: 300px;
+                @include scroll();
+            }
+            @media screen and (min-width: 1600px) {
+                padding-right: 200px;
+            }
+        }
+        .progress-row{
+            .data{
+                position: relative;
+                .value-left{
+                    position: absolute;
+                    top: -20px;
+                    left: 0;
+                }
+                .value-right{
+                    position: absolute;
+                    top: -20px;
+                    right: 0;
+                }
+            }
+        }
+    }
+    &.step-14{
+        h5{
+            line-height: 24px;
+            margin-top: 0;
+        }
+        .col-sm-5{
+            padding-right: 60px;
+            @media screen and (min-width: 1600px) {
+                padding-right: 200px;
+            }
+        }
+        .progress-row{
+            .data{
+                position: relative;
+                .value-left{
+                    position: absolute;
+                    top: -20px;
+                    left: 0;
+                }
+                .value-right{
+                    position: absolute;
+                    top: -20px;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+.dimension-chart {
+    background-color: #2f2f2f;
+    padding: 35px 20px;
+    border-radius: 8px;
+    position: relative;
+    width: 450px;
+    height: 450px;
+    span{
+        font-size: 12px;
+        color: $white;
+        @include font-weight-style(400, normal);
+    }
+    .top-left{
+        position: absolute;
+        top: 10px;
+        left: 20px;
+    }
+    .top-right{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+    .bottom-right{
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+    }
+}

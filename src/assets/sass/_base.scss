@@ -1,0 +1,132 @@
+html,
+body,
+#root {
+  min-height: 100%;
+  width: 100%;
+  background: $main-background;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  position: relative;
+}
+
+/* input autofill color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: inset 0 transparent;
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: $white !important;
+}
+
+// safri key icon remove
+::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+}
+
+.main-container {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+}
+.wid100 {
+  width: 100%;
+}
+.mg0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+.mgt10 {
+  margin-top: 10px;
+}
+.mgt20 {
+  margin-top: 20px;
+}
+.mgt25 {
+  margin-top: 25px;
+}
+.mgt60 {
+  margin-top: 60px;
+}
+.mgb0 {
+  margin-bottom: 0px;
+}
+.mgb10 {
+  margin-bottom: 10px;
+}
+.mlr0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.mr20 {
+  margin-right: 20px;
+}
+
+.pdt0 {
+  padding-top: 0 !important;
+}
+.pdb0 {
+  padding-bottom: 0 !important;
+}
+.pd0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+textarea {
+  min-height: 126px;
+}
+h3,
+h4,
+h5 {
+  word-wrap: break-word;
+}
+p {
+  word-wrap: break-word;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    width: 1300px;
+    overflow-y: auto;
+  }
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  .centered-item {
+    display: flex;
+    justify-content: center;
+  }
+}

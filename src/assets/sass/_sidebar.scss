@@ -1,0 +1,322 @@
+.dashboard-full-container {
+  width: 100%;
+  padding: 92px 0 15px 0;
+}
+
+.dashboard-left-container {
+  width: 260px;
+  position: fixed;
+  left: 0;
+  height: 100%;
+  padding: 0;
+  z-index: 1;
+  border-right: 1px solid rgba($white, 0.1);
+  background: $main-background;
+  .list-group {
+    width: 100%;
+    border-radius: 0;
+    .overview-icon {
+      background: url(../images/overview.png) no-repeat;
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      background-size: 100%;
+      margin-right: 15px;
+    }
+    .upload-icon {
+      background: url(../images/upload-icon.png) no-repeat;
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      background-size: 100%;
+      margin-right: 15px;
+    }
+    .export-icon {
+      background: url(../images/export-icon.png) no-repeat;
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      background-size: 100%;
+      margin-right: 15px;
+    }
+    .annotation-icon {
+      background: url(../images/annotation-icon.png) no-repeat;
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      background-size: 100%;
+      margin-right: 15px;
+    }
+    .dataset-icon {
+      background: url(../images/dataset-icon.png) no-repeat;
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      background-size: 100%;
+      margin-right: 15px;
+    }
+    .model-icon {
+      background: url(../images/model-icon.png) no-repeat;
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      background-size: 100%;
+      margin-right: 15px;
+    }
+
+    .list-group-item {
+      width: 100%;
+      padding: 22px 35px;
+      font-size: $f-16;
+      display: flex;
+      align-items: center;
+      @include font-weight-style-2(600, normal);
+      background-color: $main-background;
+      color: $white;
+      cursor: pointer;
+      border-color: transparent;
+      &:first-child {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 33px 30px;
+        pointer-events: none;
+        h3 {
+          @include big-head();
+          text-align: left;
+          font-size: 18px;
+          @include truncate();
+          width: 100%;
+          margin-bottom: 3px;
+        }
+        p {
+          color: #bbbbbb;
+          font-size: 13px;
+          margin-bottom: 0;
+          @include font-weight-style(400, normal);
+        }
+      }
+      & + .list-group-item {
+        border-top: 1px solid rgba($white, 0.1);
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+      &.active {
+        color: $primary-color;
+        background-color: transparent;
+        border-color: transparent;
+        border-top: 1px solid rgba($white, 0.1);
+        .overview-icon {
+          background: url(../images/overview-active.png) no-repeat;
+          width: 24px;
+          height: 24px;
+          display: inline-block;
+          background-size: 100%;
+          margin-right: 15px;
+        }
+        .upload-icon {
+          background: url(../images/upload-active.png) no-repeat;
+          width: 24px;
+          height: 24px;
+          display: inline-block;
+          background-size: 100%;
+          margin-right: 15px;
+        }
+        .export-icon {
+          background: url(../images/export-active.png) no-repeat;
+          width: 24px;
+          height: 24px;
+          display: inline-block;
+          background-size: 100%;
+          margin-right: 15px;
+        }
+        .annotation-icon {
+          background: url(../images/annotation-active.png) no-repeat;
+          width: 24px;
+          height: 24px;
+          display: inline-block;
+          background-size: 100%;
+          margin-right: 15px;
+        }
+        .dataset-icon {
+          background: url(../images/dataset-active.png) no-repeat;
+          width: 24px;
+          height: 24px;
+          display: inline-block;
+          background-size: 100%;
+          margin-right: 15px;
+        }
+        .model-icon {
+          background: url(../images/model-active.png) no-repeat;
+          width: 24px;
+          height: 24px;
+          display: inline-block;
+          background-size: 100%;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+// for new view more checkbox css
+
+.deployment-chart-wrapper {
+  width: 100%;
+  height: calc(100% - 5px);
+  margin-top: 20px;
+  overflow: auto;
+  @include scroll();
+  .deployment-chart-new {
+    &:nth-last-child(1) {
+      .deployment-third-sec {
+        border-bottom: 1px solid #000;
+        span {
+          display: block;
+          &::before {
+            content: "";
+            height: 1px;
+            background-color: #000;
+            position: absolute;
+            left: -10px;
+            bottom: -1px;
+            width: 10px;
+          }
+          &::after {
+            content: "";
+            height: 1px;
+            background-color: #000;
+            position: absolute;
+            right: -10px;
+            bottom: -1px;
+            width: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+.deployment-chart-new {
+  color: #fff;
+  display: flex;
+  width: 100%;
+  .deployment-first-sec {
+    width: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .deployment-second-sec {
+    width: 50px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  .deployment-third-sec {
+    width: calc(100% - 220px);
+    margin-right: 10px;
+    padding: 7px 4px 7px 0;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    position: relative;
+    &::before {
+      content: "";
+      height: 1px;
+      background-color: #000;
+      position: absolute;
+      left: -10px;
+      top: -1px;
+      width: 10px;
+    }
+    &::after {
+      content: "";
+      height: 1px;
+      background-color: #000;
+      position: absolute;
+      right: -10px;
+      top: -1px;
+      width: 10px;
+    }
+    .progress-bar {
+      background-color: transparent !important;
+    }
+  }
+  .deployment-four-sec {
+    color: #48fabe;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.horizontal .progress-bar {
+  float: left;
+  height: 45px;
+  width: 100%;
+  padding: 12px 0;
+}
+
+.horizontal .progress-track {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.horizontal .progress-fill {
+  position: relative;
+  background: green;
+  height: 20px;
+  width: 50%;
+  color: #fff;
+  text-align: center;
+  font-family: "Lato", "Verdana", sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.rounded .progress-track,
+.rounded .progress-fill {
+  border-radius: 3px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Vertical */
+
+.vertical .progress-bar {
+  float: left;
+  height: 300px;
+  width: 40px;
+  margin-right: 25px;
+}
+
+.vertical .progress-track {
+  position: relative;
+  width: 40px;
+  height: 100%;
+  background: #ebebeb;
+}
+
+.vertical .progress-fill {
+  position: relative;
+  background: #825;
+  height: 50%;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  font-family: "Lato", "Verdana", sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.rounded .progress-track,
+.rounded .progress-fill {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}

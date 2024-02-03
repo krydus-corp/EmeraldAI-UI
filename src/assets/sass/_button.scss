@@ -1,0 +1,286 @@
+.btn {
+  transition: background-color .5s ease;
+  box-shadow:none;
+  &:focus {
+    outline: 0;
+    box-shadow: none !important;
+  }
+  &.disabled,
+  &:disabled {
+    opacity: .65;
+    pointer-events: none;
+    color: $primary-color;
+    border: none;
+  }
+  .btn-disable {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+
+.disable-input {
+  .form-control {
+    color: #343e4a70 !important;
+    background: rgba($form-placeholder, .1) !important;
+    pointer-events: none;
+  }
+}
+
+.primary-btn {
+  @include round();
+  height: 60px;
+  min-width: 160px;
+  font-size: $f-16;
+  border: 0;
+  cursor: pointer;
+  color: $black-dark!important;
+  background-color: $primary-color!important;
+  @include font-weight-style-2(600, normal);
+  @include padding(14px, 10px, 14px, 10px);
+  outline: 0;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $black-dark!important;
+    background-color: darken($primary-color, 15%)!important;
+  }
+}
+
+.primary-btn-sm {
+  @extend .primary-btn;
+  height: 40px;
+  font-size: 12px;
+  padding: 5px;
+}
+
+
+.secondary-btn {
+  @include round();
+  height: 60px;
+  min-width: 160px;
+  font-size: $f-16;
+  border-color: transparent;
+  cursor: pointer;
+  color: $primary-color;
+  background-color: $grey-btn!important;
+  @include font-weight-style-2(600, normal);
+  @include padding(5px, 5px, 5px, 5px);
+  outline: 0;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $primary-color!important;
+    background-color: darken($grey-btn, 2%)!important;
+    border: none!important;
+  }
+}
+
+.delete-btn{
+  @include round();
+  height: 40px!important;
+  width: 200px;
+  font-size: $f-14;
+  border-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  color: #ff6060!important;
+  background-color: $grey-btn!important;
+  @include font-weight-style-2(600, normal);
+  @include padding(5px, 5px, 5px, 5px);
+  outline: 0;
+  &:hover,
+  &:focus,
+  &:active {
+    color: #ff6060!important;
+    background-color: darken($grey-btn, 2%)!important;
+    border: none!important;
+  }
+  &.disabled{
+    color: #ff6060!important;
+  }
+}
+
+.filters-btn{
+  @include round();
+  height: 40px!important;
+  min-width: 140px;
+  font-size: $f-14;
+  border-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  color: $white;
+  background-color: $grey-btn!important;
+  @include font-weight-style-2(600, normal);
+  @include padding(5px, 5px, 5px, 5px);
+  outline: 0;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white!important;
+    background-color: darken($grey-btn, 2%)!important;
+    border: none!important;
+  }
+}
+
+.minus-btn{
+  @include round();
+  height: 60px;
+  min-width: 134px;
+  font-size: $f-12;
+  border-color: transparent;
+  cursor: pointer;
+  color: $white;
+  background-color: $grey-btn;
+  @include font-weight-style-2(600, normal);
+  @include padding(5px, 5px, 5px, 5px);
+  outline: 0;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white!important;
+    background-color: darken($grey-btn, 2%)!important;
+    border: none!important;
+  }
+}
+
+.link-btn {
+  color: $primary-color;
+  font-size: $f-16;
+  background: transparent;
+  @include font-weight-style(500, normal);
+  cursor: pointer;
+  &:active {
+    color: $primary-color!important;
+    border: none;
+    // background-color: darken($primary-color, 15%)!important;
+  }
+  &:hover{
+    color: $primary-color;
+  }
+  &.red-btn {
+    color: $red-dark;
+    font-size: $f-14;
+    background: transparent;
+    @include font-weight-style(600, normal);
+    cursor: pointer;
+    padding: 0;
+  }
+  &.reds-btn {
+    color: $red-dark;
+    font-size: $f-14;
+    background: transparent;
+    @include font-weight-style(600, normal);
+    cursor: pointer;
+    padding: 0;
+    width: 65px;
+    height: 40px;
+    &:active{
+      color: $red-dark!important;
+    }
+  }
+  &.green-btn{
+    color:$primary-color;
+    font-size: 16px;
+    @include font-weight-style(600, normal);
+  }
+  &.blue-btn{
+    color:#03aff1;
+    font-size: 13px;
+    text-transform: uppercase;
+    @include font-weight-style(600, normal);
+  }
+  &.grey-btns{
+    color:#6a6a6a;
+    font-size: 13px;
+    text-transform: uppercase;
+    @include font-weight-style(600, normal);
+  }
+}
+
+.link-btn-0 {
+  padding: 0;
+  &:hover {
+    color: $base-color;
+  }
+  @extend .link-btn;
+}
+
+.grey-link-btn {
+  width: auto;
+  font-size: $f-14;
+  color:$grey;
+  cursor: pointer;
+  background: transparent;
+  padding: 5px 10px;
+  text-align: center;
+  @include font-weight-style(400, normal);
+  &:hover{
+    color:darken($grey, 10%);
+  }
+}
+
+.red-btn {
+  @include round();
+  height: 60px;
+  min-width: 160px;
+  font-size: $f-16;
+  border: 0;
+  cursor: pointer;
+  color: $white;
+  background-color: $red-dark;
+  @include font-weight-style-2(600, normal);
+  @include padding(14px, 10px, 14px, 10px);
+  outline: 0;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white!important;
+    background-color: darken($red-dark, 15%)!important;
+  }
+  &:disabled{
+    opacity: .65;
+    pointer-events: none;
+    color: $white;
+    border: none;
+    background-color: darken($red-dark, 15%)!important;
+  }
+}
+
+
+
+//-------button footer
+
+.button-panel {
+  width: 100%;
+  text-align: right;
+  .btn+.btn {
+    margin-left: 32px;
+  }
+}
+
+.center-btn {
+  margin: 0 auto;
+  text-align: center;
+  .btn+.btn {
+    margin-left: 10px;
+  }
+}
+
+.btn-space {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.full-btn {
+  width: 100%;
+  .btn {
+    width: 100%;
+  }
+}
+
+.re-annotate-btn{
+  width: 179px;
+  margin-left: 24px !important;
+}
